@@ -450,7 +450,7 @@ a:hover {
         height: 100%;
     }
 
-    #about #about-container #about-container-text  {
+    #about #about-container #about-container-text {
         padding: 38px 10px;
     }
 }
@@ -569,6 +569,14 @@ a:hover {
     margin: 8px;
 }
 
+#projects .colorwebsite {
+    border: 1px solid #BC3C90;
+}
+
+#projects .colorwebsite:hover {
+    border: 1px solid #BC3C90;
+}
+
 #projects .card-projects h3 {
     padding: 20px 0px;
     color: #fff;
@@ -580,6 +588,48 @@ a:hover {
     color: #e0e0e0;
     font-size: 16px;
     line-height: 3.2rem;
+}
+
+#projects .card-projects a {
+    color: #BC3C90;
+    position: relative;
+    font-size: 18px;
+    font-weight: 400
+}
+
+#projects .card-projects a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+    background: linear-gradient(270deg, #BC3C90 0%, #17161d 100%);
+    transform-origin: bottom right;
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1)
+}
+
+#projects .card-projects a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left
+}
+
+#projects .card-projects a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1)
+}
+
+#projects .card-projects a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left
 }
 
 @media (max-width: 768px) {
